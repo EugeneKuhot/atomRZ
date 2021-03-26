@@ -14,25 +14,25 @@
       <div class="content">
         <ul class="table-list">
           <li class="table-item table-title">
-            <h3 class="country-name-title">Nazwa kraju</h3>
-            <h3 class="population-title">Populacja kraju</h3>
-            <h3 class="people_vaccinated-title">Liczba osób zaszczepionych</h3>
-            <h3 class="percent-of-vaccinated-title">% osób zaszczepionych</h3>
+            <h3 class="country-name-title">Сountry</h3>
+            <h3 class="population-title">Population</h3>
+            <h3 class="people_vaccinated-title">Number of people vaccinated</h3>
+            <h3 class="percent-of-vaccinated-title">% of people vaccinated</h3>
           </li>
 
           <li class="table-item" v-for="country in tableData" v-if="country.All.country">
             <span class="country-name">{{ country.All.country }}</span>
 
             <span class="population" v-if="country.All.population">{{ country.All.population }}</span>
-            <span class="population" v-else>Nie ma danych</span>
+            <span class="population" v-else>No data</span>
 
             <span class="people_vaccinated" v-if="country.All.people_vaccinated">{{ country.All.people_vaccinated }}</span>
-            <span class="people_vaccinated" v-else>Nie ma danych</span>
+            <span class="people_vaccinated" v-else>No data</span>
 
             <span class="percent-of-vaccinated" v-if="country.All.people_vaccinated && country.All.population">
               {{((country.All.people_vaccinated * 100) / country.All.population).toFixed(3) }} %
             </span>
-            <span class="percent-of-vaccinated" v-else>Nie ma danych</span>
+            <span class="percent-of-vaccinated" v-else>No data</span>
           </li>
         </ul>
       </div>
