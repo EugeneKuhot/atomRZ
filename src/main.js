@@ -1,13 +1,32 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import Table from './components/Table'
+import Chart from './components/Chart'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+const NotFound = { template: '<p>Страница не найдена</p>' }
+
+const routes = {
+  '/': Table,
+  '/chart': Chart
+}
+
 new Vue({
   el: '#app',
-  components: { App },
-  template: '<App/>'
+  data: {
+    currentRoute: window.location.pathname
+  },
+
+  methods: {
+
+  },
+
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute] || NotFound
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
 })
