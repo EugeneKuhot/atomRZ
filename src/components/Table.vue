@@ -1,4 +1,5 @@
 <template>
+
   <ul class="table-list">
     <li class="table-item table-title">
       <h3 class="country-name-title">Сountry</h3>
@@ -13,7 +14,8 @@
       <span class="population" v-if="country.All.population">{{ country.All.population }}</span>
       <span class="population" v-else>No data</span>
 
-      <span class="people_vaccinated" v-if="country.All.people_vaccinated">{{ country.All.people_vaccinated }}</span>
+      <span class="people_vaccinated"
+            v-if="country.All.people_vaccinated">{{ country.All.people_vaccinated }}</span>
       <span class="people_vaccinated" v-else>No data</span>
 
       <span class="percent-of-vaccinated" v-if="country.All.people_vaccinated && country.All.population">
@@ -22,12 +24,14 @@
       <span class="percent-of-vaccinated" v-else>No data</span>
     </li>
   </ul>
+
 </template>
 
-<script >
+<script>
   import axios from 'axios'
 
   export default {
+
     data() {
       return {
         tableData: null,
@@ -54,52 +58,7 @@
   }
 </script>
 
-<style>
-
-  body{
-    color: #A7A1AE;
-    background-color: #1F2739;
-  }
-
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-
-  .header-title {
-    font-size: 3em;
-    font-weight: 100;
-    line-height: 1em;
-    text-align: center;
-    color: #4DC3FA;
-  }
-
-  .header-title--yellow-style {
-    color: #FFF842;
-  }
-
-  .header-creator-title,
-  .header-creator-title a {
-    font-size: 1.2em;
-    font-weight: 300;
-    text-align: center;
-    line-height: 1em;
-    padding-bottom: 2em;
-    color: #FB667A;
-    transition: .3s all ease;
-  }
-
-  .header-creator-title {
-    display: block;
-  }
-
-  .header-creator-title a:hover {
-    opacity: .6;
-    transition: .3s all ease;
-  }
+<style scoped>
 
   .table-list {
     text-align: left;

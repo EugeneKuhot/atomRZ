@@ -10,7 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    "chart.js": "^2.9.4",
+    "moment": "^2.29.1",
+    "vue": "^2.5.2",
+    "vue-chartjs": "^3.5.1",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
