@@ -40,18 +40,18 @@
     },
 
     created() {
-      this.getTableData();
+      this.getTableData()
     },
 
     methods: {
       getTableData() {
         axios.get(this.tableEndpoint)
           .then(response => {
-            this.tableData = response.data;
+            this.tableData = response.data
           })
           .catch(error => {
-            console.log('-----error-------');
-            console.log(error);
+            console.log('-----error-------')
+            console.log(error)
           })
       }
     }

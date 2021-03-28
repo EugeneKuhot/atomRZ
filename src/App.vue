@@ -1,5 +1,4 @@
 <template>
-
   <div id="app">
     <header>
       <h1 class="header-title">
@@ -25,26 +24,24 @@
 </template>
 
 <script>
-
-  import Table from "./components/Table";
-  import Chart from "./components/Chart";
-  import NotFound from "./components/404";
+  import Table from './components/Table/Table'
+  import Chart from './components/Chart/Chart'
+  import NotFound from './components/404/404'
 
   export default {
-    components: {
-      Table,
-      Chart,
-      NotFound
-    },
+      components: {
+        Table,
+        Chart,
+        NotFound
+      },
 
     data() {
       return {
-        title: "Coronavirus",
-        component: "Table"
+        title: 'Coronavirus',
+        component: 'Table'
       }
     }
   }
-
 </script>
 
 <style>
@@ -113,7 +110,6 @@
     margin: 0 auto;
     width: 30%;
     height: 50px;
-    font-family: Helvetica;
     border-bottom: 5px solid #173814;
     border-top: none;
     border-left: none;
@@ -121,12 +117,16 @@
     background: linear-gradient(#469e3f, #255b20);
     color: white;
     border-radius: 10px;
-    box-shadow: 0px 2px 10px grey;
-    transition: 150ms ease;
+    transition: .3s ease;
     text-align: center;
+    text-transform: uppercase;
     line-height: 50px;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  .btn-3d-sub:hover {
+    box-shadow: 0px 2px 10px grey;
   }
 
   .btn-3d-sub:active {

@@ -1,7 +1,7 @@
-import VueRouter from 'vue-router';
-import Chart from './../components/Chart';
-import Table from './../components/Table';
-import NotFound from './../components/404';
+import VueRouter from 'vue-router'
+import Table from '../components/Table/Table'
+import NotFound from '../components/404/404'
+import ChartComponent from "../components/Chart/ChartComponent"
 
 export default new VueRouter ({
   mode: 'history',
@@ -10,12 +10,10 @@ export default new VueRouter ({
       path: '/',
       component: Table
     },
-
     {
       path: '/chart',
-      component: Chart
+      component: ChartComponent
     },
-
     {
       path: '*',
       component: NotFound
